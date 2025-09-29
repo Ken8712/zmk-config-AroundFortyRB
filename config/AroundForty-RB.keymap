@@ -13,7 +13,44 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+        };
+
+        shifttab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
+
+        doublequotation {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <16 17>;
+        };
+
+        quote {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <17 18>;
+        };
+
+        underbar {
+            bindings = <&kp LS(INTERNATIONAL_1)>;
+            key-positions = <18 19>;
+        };
+
+        ctrlhome {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <1 2>;
+        };
+
+        ctrlend {
+            bindings = <&kp LC(END)>;
+            key-positions = <2 3>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -64,10 +101,10 @@
 
         NUM+Symbol {
             bindings = <
-&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(PLUS)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK  &kp LEFT_PARENTHESIS
-&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DQT)                  &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR    &kp PERCENT
-&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT       &kp LS(EQUAL)  &kp RIGHT_BRACKET  &kp BACKSLASH     &kt RIGHT_BRACE  &kp PIPE      &mt LCTRL INTERNATIONAL_1
-&kp RBKT              &trans  &trans  &trans  &trans        &trans         &kp ENTER          &kp LEFT_BRACE    &trans           &lt 2 UNDER   &kp LS(INTERNATIONAL_3)
+&kp MINUS             &kp N7  &kp N8  &kp N9  &kp PLUS                &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LEFT_PARENTHESIS
+&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DQT)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT      &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kt RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
+&kp RBKT              &trans  &trans  &trans  &trans       &trans     &kp ENTER          &kp LEFT_BRACE    &trans           &lt 2 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
 
             sensor-bindings = <&scroll_up_down>;
