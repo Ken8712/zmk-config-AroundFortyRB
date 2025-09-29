@@ -22,6 +22,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        hold_tap_and_release: hold_tap_and_release {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kt MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kt MACRO_PLACEHOLDER>;
+            label = "HOLD_TAP_AND_RELEASE";
+        };
     };
 
     behaviors {
@@ -68,10 +75,10 @@
 
         Common_Layer {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)         &trans             &kp F5             &kp LG(LEFT_ARROW)  &kp LG(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
-&kp HOME    &kp LEFT         &kp DOWN   &kp RIGHT           &kp END            &kp LC(F)          &mkp MB1            &kp LG(TAB)    &mkp MB2          &kp F7
-&kp LC(Z)   &kp LC(X)        &kp LC(C)  &kp LG(DOWN_ARROW)  &kp LC(A)  &trans  &kp LC(PAGE_DOWN)  &mkp MB4            &kp PAGE_DOWN  &mkp MB5          &kp LC(LS(T))
-&trans      &trans           &trans     &trans              &trans     &trans  &trans             &kp LG(T)           &trans         &trans            &kp END
+&kp ESCAPE  &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)         &trans             &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT_ARROW  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+&kp HOME    &kp LEFT         &kp DOWN   &kp RIGHT           &kp END            &kp LC(F)          &mkp MB1                                   &kp LG(TAB)                                 &mkp MB2          &kp F7
+&kp LC(Z)   &kp LC(X)        &kp LC(C)  &kp LG(DOWN_ARROW)  &kp LC(A)  &trans  &kp LC(PAGE_DOWN)  &mkp MB4                                   &kp PAGE_DOWN                               &mkp MB5          &kp LC(LS(T))
+&trans      &trans           &trans     &trans              &trans     &trans  &trans             &kp LG(T)                                  &trans                                      &trans            &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
