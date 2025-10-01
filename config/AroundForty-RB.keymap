@@ -50,6 +50,11 @@
             bindings = <&kp LC(END)>;
             key-positions = <2 3>;
         };
+
+        mouselayer {
+            bindings = <&tog 2>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {
@@ -65,6 +70,21 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &kt MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kt MACRO_PLACEHOLDER>;
             label = "HOLD_TAP_AND_RELEASE";
+        };
+
+        ctrl_and_click: ctrl_and_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LCTRL &mkp LCLK>;
+
+            label = "CTRL_AND_CLICK";
         };
     };
 
@@ -115,7 +135,7 @@
 &kp ESCAPE  &kp LC(LS(TAB))  &kp UP     &kp LC(TAB)  &trans             &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT_ARROW  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
 &kp HOME    &kp LEFT         &kp DOWN   &kp RIGHT    &kp END            &kp LC(F)          &mkp MB1                                   &kp LG(TAB)                                 &mkp MB2          &kp F7
 &kp LC(Z)   &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LC(A)  &trans  &kp LC(PAGE_DOWN)  &mkp MB4                                   &kp PAGE_DOWN                               &mkp MB5          &kp LC(LS(T))
-&trans      &trans           &trans     &trans       &trans     &trans  &trans             &kp LG(T)                                  &trans                                      &trans            &kp END
+&trans      &trans           &trans     &trans       &trans     &trans  &trans             &kp LG(T)                                  &trans                                      &kp LS(LG(S))     &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -152,7 +172,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        LAYER_6 {
+        bt {
             bindings = <
 &trans  &kp LG(N7)  &kp LG(E)   &trans      &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans          &trans        &trans        &trans        &trans        &trans
