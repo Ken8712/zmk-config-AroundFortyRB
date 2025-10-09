@@ -143,10 +143,10 @@
 
         Scroll_Layer {
             bindings = <
-&kp LA(Q)  &kp LA(W)  &kp LA(E)  &kp LA(R)  &kp LA(T)                 &kp LA(Y)  &kp LA(U)     &kp LA(I)      &kp LA(O)    &kp LA(P)
-&kp LA(A)  &kp LA(S)  &kp LA(D)  &kp LA(F)  &kp LA(G)                 &kp LA(H)  &kp LA(J)     &kp LA(K)      &kp LA(L)    &kp LA(MINUS)
-&kp LA(Z)  &kp LA(X)  &kp LA(C)  &kp LA(V)  &kp LA(B)  &kp LA(COLON)  &kp LA(N)  &kp LA(M)     &kp LA(COMMA)  &kp LA(DOT)  &kp LA(FSLH)
-&trans     &trans     &trans     &trans     &trans     &trans         &trans     &kp LA(SEMI)  &trans         &trans       &trans
+&kp LA(Q)  &kp LA(W)  &hold_tap_and_release LEFT_ALT E  &hold_tap_and_release LEFT_ALT R  &hold_tap_and_release LEFT_ALT T                 &kp LA(Y)  &kp LA(U)     &kp LA(I)      &kp LA(O)    &kp LA(P)
+&kp LA(A)  &kp LA(S)  &kp LA(D)                         &kp LA(F)                         &kp LA(G)                                        &kp LA(H)  &kp LA(J)     &kp LA(K)      &kp LA(L)    &kp LA(MINUS)
+&kp LA(Z)  &kp LA(X)  &kp LA(C)                         &kp LA(V)                         &kp LA(B)                         &kp LA(COLON)  &kp LA(N)  &kp LA(M)     &kp LA(COMMA)  &kp LA(DOT)  &kp LA(FSLH)
+&trans     &trans     &trans                            &trans                            &trans                            &trans         &trans     &kp LA(SEMI)  &trans         &trans       &trans
             >;
         };
 
