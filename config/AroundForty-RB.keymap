@@ -143,10 +143,10 @@
 
         Scroll_Layer {
             bindings = <
-&hold_tap_and_release LEFT_ALT Q  &hold_tap_and_release LEFT_ALT W  &hold_tap_and_release LEFT_ALT E  &hold_tap_and_release LEFT_ALT R  &hold_tap_and_release LEFT_ALT T                 &kp LA(Y)  &kp LA(U)     &kp LA(I)      &kp LA(O)    &kp LA(P)
-&kp LA(A)                         &hold_tap_and_release LEFT_ALT S  &hold_tap_and_release LEFT_ALT D  &kp LA(F)                         &kp LA(G)                                        &kp LA(H)  &kp LA(J)     &kp LA(K)      &kp LA(L)    &kp LA(MINUS)
-&kp LA(Z)                         &kp LA(X)                         &kp LA(C)                         &kp LA(V)                         &kp LA(B)                         &kp LA(COLON)  &kp LA(N)  &kp LA(M)     &kp LA(COMMA)  &kp LA(DOT)  &kp LA(FSLH)
-&trans                            &trans                            &trans                            &trans                            &trans                            &trans         &trans     &kp LA(SEMI)  &trans         &trans       &trans
+&hold_tap_and_release LEFT_ALT Q  &hold_tap_and_release LEFT_ALT W  &hold_tap_and_release LEFT_ALT E  &hold_tap_and_release LEFT_ALT R  &hold_tap_and_release LEFT_ALT T                                        &hold_tap_and_release LEFT_ALT Y      &hold_tap_and_release LEFT_ALT U          &hold_tap_and_release LEFT_ALT I  &hold_tap_and_release LEFT_ALT O       &hold_tap_and_release LEFT_ALT P
+&hold_tap_and_release LEFT_ALT A  &hold_tap_and_release LEFT_ALT S  &hold_tap_and_release LEFT_ALT D  &hold_tap_and_release LEFT_ALT F  &hold_tap_and_release LEFT_ALT G                                        &hold_tap_and_release LEFT_ALT H      &hold_tap_and_release LEFT_ALT J          &hold_tap_and_release LEFT_ALT K  &hold_tap_and_release LALT L           &hold_tap_and_release LALT MINUS
+&hold_tap_and_release LEFT_ALT Z  &hold_tap_and_release LEFT_ALT X  &hold_tap_and_release LEFT_ALT C  &hold_tap_and_release LEFT_ALT V  &hold_tap_and_release LEFT_ALT B  &hold_tap_and_release LEFT_ALT COLON  &hold_tap_and_release LEFT_ALT B      &hold_tap_and_release LALT M              &hold_tap_and_release LALT COMMA  &hold_tap_and_release LEFT_ALT PERIOD  &hold_tap_and_release LALT SLASH
+&trans                            &trans                            &trans                            &trans                            &trans                            &trans                                &hold_tap_and_release LEFT_ALT ENTER  &hold_tap_and_release LEFT_ALT SEMICOLON  &trans                            &trans                                 &trans
             >;
         };
 
