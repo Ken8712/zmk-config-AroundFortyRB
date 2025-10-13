@@ -44,11 +44,13 @@
         ctrlhome {
             bindings = <&kp LC(HOME)>;
             key-positions = <1 2>;
+            layers = <2>;
         };
 
         ctrlend {
             bindings = <&kp LC(END)>;
             key-positions = <2 3>;
+            layers = <2>;
         };
 
         mouselayer {
