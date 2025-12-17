@@ -83,10 +83,10 @@
 
         Mac-Function_Layer {
             bindings = <
-&kp LG(A)  &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LG(F)          &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
-&kp TAB    &kp LEFT_GUI  &kp LS(TAB)  &mkp MB1   &mkp MB2           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
-&trans     &trans        &trans       &trans     &mkp MB3   &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SQT
-&trans     &trans        &trans       &trans     &trans     &trans  &kp ENTER             &kp COLON              &kp BACKSPACE    &kp BACKSLASH  &kp HASH
+&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LG(F)          &kp F5             &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+&kp HOME    &kp LEFT         &kp DOWN      &kp RIGHT    &kp END            &kp LC(F)          &mkp MB1      &kp LG(TAB)    &mkp MB2          &kp F7
+&kp LC(Z)   &kp LC(X)        &kp LC(C)     &kp LC(V)    &kp LC(A)  &trans  &kp LC(PAGE_DOWN)  &mkp MB4      &kp PG_DN      &mkp MB5          &kp LS(LC(T))
+&trans      &trans           &trans        &trans       &trans     &trans  &trans             &kp LG(T)     &kp DELETE     &kp LS(LG(S))     &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
