@@ -23,12 +23,37 @@
 
         shift+tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <19 18>;
+            key-positions = <12 13>;
         };
 
         escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
+            bindings = <&kp AT_SIGN>;
+            key-positions = <16 17>;
+        };
+
+        quote {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <17 18>;
+        };
+
+        underbar {
+            bindings = <&kp LS(INTERNATIONAL_1)>;
+            key-positions = <18 19>;
+        };
+
+        ctrlhome {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <1 2 25>;
+        };
+
+        ctrlend {
+            bindings = <&kp LC(END)>;
+            key-positions = <2 3 25>;
+        };
+
+        mouselayer {
+            bindings = <&tog 2>;
+            key-positions = <38 6 7>;
         };
     };
 
@@ -63,7 +88,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Mac-Default_Layer {
+        default_layer {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
 &kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
@@ -72,16 +97,16 @@
             >;
         };
 
-        Win-Default_Layer {
+        NUM+Symbol {
             bindings = <
-&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(PLUS)             &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
-&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(STAR)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
-&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT       &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
-&kp RIGHT_BRACKET     &trans  &trans  &trans  &trans        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 2 LS(LG(S))  &kp LS(INTERNATIONAL_3)
+&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
+&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
+&kp RIGHT_BRACKET     &trans  &trans  &trans  &trans                 &trans     &trans             &kp LEFT_BRACE    &trans           &lt 2 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
         };
 
-        Mac-Function_Layer {
+        mouse {
             bindings = <
 &kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LG(F)          &kp F5             &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
 &kp HOME    &kp LEFT         &kp DOWN      &kp RIGHT    &kp END            &kp LC(F)          &mkp MB1      &kp LG(TAB)    &mkp MB2          &kp F7
@@ -92,7 +117,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Win-Function_Layer {
+        Scroll_Layer {
             bindings = <
 &kp LA(Q)  &kp LA(W)  &kp LA(E)  &kp LA(R)  &kp LA(T)                 &kp LA(Y)      &kp LA(U)     &kp LA(I)      &kp LA(O)    &kp LA(P)
 &kp LA(A)  &kp LA(S)  &kp LA(D)  &kp LA(F)  &kp LA(G)                 &kp LA(H)      &kp LA(J)     &kp LA(K)      &kp LA(L)    &kp LA(MINUS)
@@ -103,7 +128,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Mac-Common_Layer {
+        Setting_Layer {
             bindings = <
 &kp ESCAPE   &kp LA(LC(LG(N2)))  &kp LC(LA(LG(NUMBER_3)))  &kp LG(LC(LA(N4)))  &kp LA(LC(LG(N5)))           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans       &kp LC(N4)          &kp LC(N5)                &kp LC(N6)          &trans                       &trans        &trans        &trans        &trans        &trans
@@ -114,7 +139,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Win-Common_Layer {
+        textselector {
             bindings = <
 &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)  &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LC(W)
 &kp LS(HOME)      &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &kp LS(END)                &trans        &trans       &trans  &trans  &kp LG(UP)
@@ -125,7 +150,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_9 {
+        bt {
             bindings = <
 &trans       &kp LG(N7)  &kp LG(E)   &kp LG(LC(LA(N4)))  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans       &kp LG(N4)  &kp LG(N5)  &kp LG(N6)          &trans          &trans        &trans        &trans        &trans        &trans
@@ -136,7 +161,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        Num_Layer {
+        right_bottom_key_layer {
             bindings = <
 &kp F1   &kp F2   &kp F3  &kp F4  &kp F5           &kp PLUS      &kp MINUS   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9
 &kp F6   &kp F7   &kp F8  &kp F9  &kp F10          &kp EQUAL     &kp COLON   &kp N4         &kp N5         &kp N6
@@ -145,7 +170,7 @@
             >;
         };
 
-        Setting_Layer {
+        layer_8 {
             bindings = <
 &studio_unlock  &trans  &trans  &trans  &trans         &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans          &trans  &trans  &trans  &trans         &trans        &trans          &trans        &trans        &trans
@@ -163,6 +188,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        textselector {
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
     };
 };
