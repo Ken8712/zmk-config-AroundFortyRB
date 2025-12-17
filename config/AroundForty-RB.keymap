@@ -74,10 +74,10 @@
 
         Win-Default_Layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                      &kp T                          &kp Y        &kp U        &kp I          &kp O       &kp P
-&kp A             &kp S         &kp D         &kp F                      &kp G                          &kp H        &kp J        &kp K          &kp L       &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &kp LG(LS(S))     &kp N        &kp M        &kp COMMA      &kp PERIOD  &kp SLASH
-&kp LCTRL         &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_1  &lt 3 SPACE  &lt 6 LANGUAGE_2  &lt 5 ENTER  &kp AT_SIGN  &kp BACKSPACE  &lt 7 HASH  &kp DELETE
+&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(PLUS)             &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
+&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(STAR)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT       &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
+&kp RIGHT_BRACKET     &trans  &trans  &trans  &trans        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 2 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
         };
 
