@@ -2,9 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # ドライバーを badjeff に変更
-    - name: badjeff
-      url-base: https://github.com/badjeff
+    - name: razilyis
+      url-base: https://github.com/razilyis
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
@@ -12,9 +11,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # badjeffのドライバーを読み込み（mainブランチを指定して最新ZMKに合わせる）
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: razilyis
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
