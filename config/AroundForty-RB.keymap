@@ -157,7 +157,7 @@
             bindings = <
 &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)  &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LC(W)
 &kp LS(HOME)      &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &kp LS(END)                &trans        &trans       &trans  &trans  &kp LG(UP)
-&trans            &trans        &trans        &trans         &trans             &trans  &kp LC(HOME)  &trans       &trans  &trans  &kp LG(DOWN)
+&trans            &trans        &trans        &kp LG(V)      &trans             &trans  &kp LC(HOME)  &trans       &trans  &trans  &kp LG(DOWN)
 &trans            &trans        &trans        &trans         &trans             &trans  &trans        &kp LC(END)  &trans  &trans  &trans
             >;
 
