@@ -40,9 +40,9 @@
                            // <&zip_temp_layer 9 300>;
 
         scroll-layer {
-            layers = <3 4>;
+            layers = <4>;
             input-processors = <&zip_xy_to_scroll_mapper>, 
-                               <&zip_scroll_scaler 1 80>;
+                               <&zip_scroll_scaler 1 120>;
         };
     };
 };
