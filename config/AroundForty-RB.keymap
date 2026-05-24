@@ -208,8 +208,8 @@
             bindings = <
 &kp ESCAPE          &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp F15                             &kp LG(R)          &hold_tap_and_release GLOBE LA(LEFT_ARROW)  &hold_tap_and_release GLOBE LA(RIGHT)  &hold_tap_and_release GLOBE LEFT_ARROW  &hold_tap_and_release GLOBE RIGHT
 &kp LG(LEFT_ARROW)  &kp LEFT         &kp DOWN      &kp RIGHT    &kp LG(RIGHT_ARROW)                 &kp LA(COMMA)      &mkp MB1                                    &hold_tap_and_release GLOBE UP_ARROW   &mkp MB2                                &kp LA(K)
-&kp LG(Z)           &kp LG(X)        &kp LG(C)     &kp LG(V)    &kp LG(A)            &fast_tap F14  &kp LC(PAGE_DOWN)  &mkp MB4                                    &kp PG_DN                              &mkp MB5                                &kp LS(LC(T))
-&trans              &trans           &trans        &trans       &trans               &trans         &lt 3 LS(ENTER)    &kp LG(LC(D))                               &kp DELETE                             &kp LS(LG(S))                           &kp END
+&kp LG(Z)           &kp LG(X)        &kp LG(C)     &kp LG(V)    &kp LG(A)            &fast_tap F14  &kp LC(PAGE_DOWN)  &mkp MB4                                    &kp PG_DN                              &mkp MB5                                &kp LS(LG(NUMBER_3))
+&trans              &trans           &trans        &trans       &trans               &trans         &lt 3 LS(ENTER)    &kp LG(LC(D))                               &kp DELETE                             &kp LS(LG(NUMBER_4))                    &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
