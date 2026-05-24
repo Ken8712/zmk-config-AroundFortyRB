@@ -228,7 +228,7 @@
 
         textselector {
             bindings = <
-&kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)                                &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LG(W)
+&kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)                                &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LC(W)
 &kp LS(HOME)      &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)                                &kp LS(END)                &trans        &trans       &trans  &trans  &kp LG(UP)
 &trans            &trans        &trans        &hold_tap_and_release GLOBE INTERNATIONAL_3  &trans             &trans  &kp LC(HOME)  &trans       &trans  &trans  &kp LG(DOWN)
 &trans            &trans        &trans        &trans                                       &trans             &trans  &trans        &kp LC(END)  &trans  &trans  &trans
@@ -239,7 +239,7 @@
 
         TEXTSELECTOR_ipad {
             bindings = <
-&kp LS(LC(LEFT))        &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)                                &kp LS(LC(RIGHT))                &trans                                      &trans                                      &trans                                       &trans                                           &kp LC(W)
+&kp LS(LC(LEFT))        &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)                                &kp LS(LC(RIGHT))                &trans                                      &trans                                      &trans                                       &trans                                           &kp LG(W)
 &kp LS(LG(LEFT_ARROW))  &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)                                &kp LS(LG(RIGHT_ARROW))          &hold_tap_and_release GLOBE LA(UP_ARROW)    &hold_tap_and_release GLOBE LC(LEFT_ARROW)  &hold_tap_and_release GLOBE LC(RIGHT_ARROW)  &hold_tap_and_release GLOBE LA(INTERNATIONAL_3)  &hold_tap_and_release GLOBE F
 &trans                  &trans        &trans        &hold_tap_and_release GLOBE INTERNATIONAL_3  &trans                   &trans  &hold_tap_and_release GLOBE LA(DOWN_ARROW)  &trans                                      &trans                                       &trans                                           &hold_tap_and_release LEFT_WIN M
 &trans                  &trans        &trans        &trans                                       &trans                   &trans  &trans                                      &hold_tap_and_release GLOBE LA(UP_ARROW)    &trans                                       &trans                                           &trans
