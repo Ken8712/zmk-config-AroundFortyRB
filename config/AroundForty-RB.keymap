@@ -52,7 +52,7 @@
         };
 
         mouselayer {
-            bindings = <&tog 2>;
+            bindings = <&tog 3>;
             key-positions = <38 6 7>;
         };
     };
@@ -78,6 +78,31 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TAP";
         };
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>;
+
+            label = "BT0";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 3>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "BT1";
+        };
     };
 
     behaviors {
@@ -98,7 +123,7 @@
             tap-ms = <20>;
         };
 
-         tog_on: toggle_layer_on_only {
+        tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
@@ -116,12 +141,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        windows {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
 &kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 2 SPACE  &lt 5 LANGUAGE_1             &lt 1 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 8 PAGE_UP  &lt 6 PAGE_DOWN
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 LANGUAGE_2  &lt 3 SPACE  &lt 6 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 9 PAGE_UP  &lt 7 PAGE_DOWN
+            >;
+        };
+
+        ipad {
+            bindings = <
+&kp W      &kp W         &kp W         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 4 LANGUAGE_2  &lt 3 SPACE  &lt 6 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 9 PAGE_UP  &lt 7 PAGE_DOWN
             >;
         };
 
@@ -130,7 +164,7 @@
 &kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
 &kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
 &mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
-&trans                &trans  &trans  &trans  &lt 2 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 2 LS(LG(S))  &kp LS(INTERNATIONAL_3)
+&trans                &trans  &trans  &trans  &lt 3 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 3 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
         };
 
@@ -139,7 +173,7 @@
 &kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp F15                   &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
 &kp HOME    &kp LEFT         &kp DOWN      &kp RIGHT    &kp END                   &kp LC(F)          &mkp MB1                                   &kp LG(TAB)                           &mkp MB2          &kp F7
 &kp LC(Z)   &kp LC(X)        &kp LC(C)     &kp LC(V)    &kp LC(A)  &fast_tap F14  &kp LC(PAGE_DOWN)  &mkp MB4                                   &kp PG_DN                             &mkp MB5          &kp LS(LC(T))
-&trans      &trans           &trans        &trans       &trans     &trans         &lt 1 LS(ENTER)    &kp LG(T)                                  &kp DELETE                            &kp LS(LG(S))     &kp END
+&trans      &trans           &trans        &trans       &trans     &trans         &lt 2 LS(ENTER)    &kp LG(T)                                  &kp DELETE                            &kp LS(LG(S))     &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -198,10 +232,10 @@
 
         Setting_Layer {
             bindings = <
-&kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(N2)))  &kp LC(LA(LG(NUMBER_3)))  &kp LG(LC(LA(N4)))  &kp LA(LC(LG(N5)))           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans                    &kp LC(N4)          &kp LC(N5)                &kp LC(N6)          &trans                       &trans        &trans        &trans        &trans        &trans
-&trans                    &kp LC(N1)          &kp LC(N2)                &kp LC(N3)          &trans              &kp INS  &trans        &trans        &bootloader   &trans        &bt BT_CLR
-&bootloader               &trans              &trans                    &trans              &trans              &trans   &trans        &kp LG(T)     &trans        &trans        &bt BT_CLR_ALL
+&kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(N2)))  &kp LC(LA(LG(NUMBER_3)))  &kp LG(LC(LA(N4)))  &kp LA(LC(LG(N5)))           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt1    &bt BT_SEL 4
+&trans                    &kp LC(N4)          &kp LC(N5)                &kp LC(N6)          &trans                       &trans        &trans        &trans        &trans  &trans
+&trans                    &kp LC(N1)          &kp LC(N2)                &kp LC(N3)          &trans              &kp INS  &trans        &trans        &bootloader   &trans  &bt BT_CLR
+&bootloader               &trans              &trans                    &trans              &trans              &trans   &trans        &kp LG(T)     &trans        &trans  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -212,8 +246,8 @@
         compatible = "zmk,conditional-layers";
 
         textselector {
-            if-layers = <1 2>;
-            then-layer = <4>;
+            if-layers = <2 3>;
+            then-layer = <5>;
         };
     };
 };
