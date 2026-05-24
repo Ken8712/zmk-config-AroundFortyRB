@@ -52,7 +52,7 @@
         };
 
         mouselayer {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <38 6 7>;
         };
     };
@@ -159,19 +159,19 @@
 
         windows {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O           &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L           &kp MINUS
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD      &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 LANGUAGE_2  &lt 3 SPACE  &lt 7 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 10 PAGE_UP  &lt 8 PAGE_DOWN
+&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 4 SPACE  &lt 9 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &lt 10 PAGE_DOWN
             >;
         };
 
         ipad {
             bindings = <
-&kp W      &kp W         &kp W         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O           &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L           &kp MINUS
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD      &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 5 LANGUAGE_2  &lt 4 SPACE  &lt 7 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 10 PAGE_UP  &lt 8 PAGE_DOWN
+&kp W      &kp W         &kp W         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 6 LANGUAGE_2  &lt 5 SPACE  &lt 9 LANGUAGE_1             &lt 3 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &lt 10 PAGE_DOWN
             >;
         };
 
@@ -180,7 +180,16 @@
 &kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
 &kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
 &mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
-&trans                &trans  &trans  &trans  &lt 3 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 3 LS(LG(S))  &kp LS(INTERNATIONAL_3)
+&trans                &trans  &trans  &trans  &lt 4 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 4 LS(LG(S))  &kp LS(INTERNATIONAL_3)
+            >;
+        };
+
+        num+shimbol_ipad {
+            bindings = <
+&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
+&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
+&trans                &trans  &trans  &trans  &lt 5 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 4 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
         };
 
@@ -200,7 +209,7 @@
 &kp ESCAPE          &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp F15                             &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
 &kp LG(LEFT_ARROW)  &kp LEFT         &kp DOWN      &kp RIGHT    &kp LG(RIGHT_ARROW)                 &kp LA(COMMA)      &mkp MB1                                   &kp LG(TAB)                           &mkp MB2          &kp F7
 &kp LG(Z)           &kp LG(X)        &kp LG(C)     &kp LG(V)    &kp LG(A)            &fast_tap F14  &kp LC(PAGE_DOWN)  &mkp MB4                                   &kp PG_DN                             &mkp MB5          &kp LS(LC(T))
-&trans              &trans           &trans        &trans       &trans               &trans         &lt 2 LS(ENTER)    &kp LG(LC(D))                              &kp DELETE                            &kp LS(LG(S))     &kp END
+&trans              &trans           &trans        &trans       &trans               &trans         &lt 3 LS(ENTER)    &kp LG(LC(D))                              &kp DELETE                            &kp LS(LG(S))     &kp END
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -218,6 +227,17 @@
         };
 
         textselector {
+            bindings = <
+&kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)  &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LC(W)
+&kp LS(HOME)      &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &kp LS(END)                &trans        &trans       &trans  &trans  &kp LG(UP)
+&trans            &trans        &trans        &kp LG(V)      &trans             &trans  &kp LC(HOME)  &trans       &trans  &trans  &kp LG(DOWN)
+&trans            &trans        &trans        &trans         &trans             &trans  &trans        &kp LC(END)  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        TEXTSELECTOR_ipad {
             bindings = <
 &kp LS(LC(LEFT))  &kp LC(LEFT)  &kp LS(UP)    &kp LC(RIGHT)  &kp LS(LC(RIGHT))          &trans        &trans       &trans  &trans  &kp LC(W)
 &kp LS(HOME)      &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &kp LS(END)                &trans        &trans       &trans  &trans  &kp LG(UP)
@@ -273,8 +293,13 @@
         compatible = "zmk,conditional-layers";
 
         textselector {
-            if-layers = <2 3>;
-            then-layer = <6>;
+            if-layers = <2 4>;
+            then-layer = <7>;
+        };
+
+        textselector_ipad {
+            if-layers = <5 2>;
+            then-layer = <8>;
         };
     };
 };
