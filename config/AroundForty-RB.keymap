@@ -171,7 +171,7 @@
 &kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
 &kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 6 LANGUAGE_2  &lt 5 SPACE  &lt 9 LANGUAGE_1             &lt 3 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &lt 10 PAGE_DOWN
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 6 LANGUAGE_2  &lt 5 SPACE  &lt 9 LANGUAGE_1             &lt 3 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &mt LEFT_WIN PAGE_DOWN
             >;
         };
 
@@ -179,17 +179,17 @@
             bindings = <
 &kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
 &kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
-&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL LC(INTERNATIONAL_1)
 &trans                &trans  &trans  &trans  &lt 4 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 4 LS(LG(S))  &kp LS(INTERNATIONAL_3)
             >;
         };
 
         num+shimbol_ipad {
             bindings = <
-&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK     &kp LPAR
-&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR       &kp PERCENT
-&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE         &mt LCTRL INTERNATIONAL_1
-&trans                &trans  &trans  &trans  &lt 5 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 4 LS(LG(S))  &kp LS(INTERNATIONAL_3)
+&kp MINUS             &kp N7  &kp N8  &kp N9  &kp LS(SEMICOLON)                 &kp EQUAL          &kp CARET         &kp PLUS         &kp ASTERISK           &kp LPAR
+&kp N0                &kp N4  &kp N5  &kp N6  &kp LS(DOUBLE_QUOTES)             &kp EXCLAMATION    &kp LEFT_BRACKET  &kp POUND        &kp DOLLAR             &kp PERCENT
+&mt LEFT_SHIFT SLASH  &kp N1  &kp N2  &kp N3  &kp DOT                &kp UNDER  &kp RIGHT_BRACKET  &kp BACKSLASH     &kp RIGHT_BRACE  &kp PIPE               &mt LCTRL INTERNATIONAL_3
+&trans                &trans  &trans  &trans  &lt 5 LS(SPACE)        &trans     &trans             &kp LEFT_BRACE    &trans           &lt 5 INTERNATIONAL_3  &kp LS(INTERNATIONAL_3)
             >;
         };
 
