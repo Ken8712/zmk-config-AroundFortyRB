@@ -159,19 +159,19 @@
 
         windows {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 4 SPACE  &lt 9 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &lt 10 PAGE_DOWN
+&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O           &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L           &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD      &mt LEFT_ALT SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 4 SPACE  &lt 9 LANGUAGE_1             &lt 2 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 11 PAGE_UP  &lt 10 PAGE_DOWN
             >;
         };
 
         ipad {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O          &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L          &kp MINUS
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD     &mt LEFT_ALT SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 6 LANGUAGE_2  &lt 5 SPACE  &lt 9 LANGUAGE_1             &lt 3 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 3 PAGE_UP  &mt LEFT_WIN PAGE_DOWN
+&kp Q      &kp W         &kp E         &kp R                        &kp T                                     &kp Y        &kp U                     &kp I          &kp O           &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G                                     &kp H        &kp J                     &kp K          &kp L           &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                        &kp B        &mt LEFT_SHIFT SINGLE_QUOTE  &kp N        &kp M                     &kp COMMA      &kp PERIOD      &mt LEFT_ALT SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_1 6 LANGUAGE_2  &lt 5 SPACE  &lt 9 LANGUAGE_1             &lt 3 ENTER  &mt LEFT_SHIFT SEMICOLON  &kp BACKSPACE  &lt 11 PAGE_UP  &mt LEFT_WIN PAGE_DOWN
             >;
         };
 
@@ -250,10 +250,10 @@
 
         bt {
             bindings = <
-&trans       &kp LG(N7)  &kp LG(E)   &kp LG(LC(LA(N4)))  &trans          &bt0    &bt BT_SEL 1  &bt BT_SEL 2  &bt1    &bt BT_SEL 4
-&trans       &kp LG(N4)  &kp LG(N5)  &kp LG(N6)          &trans          &trans  &trans        &trans        &trans  &trans
-&trans       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)          &trans  &kp F2  &trans  &trans        &trans        &trans  &bt BT_CLR
-&bootloader  &trans      &trans      &trans              &trans  &trans  &trans  &trans        &trans        &trans  &bt BT_CLR_ALL
+&trans       &kp LG(N7)  &kp LG(E)   &kp LG(NUMBER_9)  &trans          &bt0    &bt BT_SEL 1  &bt BT_SEL 2  &bt1    &bt BT_SEL 4
+&trans       &kp LG(N4)  &kp LG(N5)  &kp LG(N6)        &trans          &trans  &trans        &trans        &trans  &trans
+&trans       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)        &trans  &kp F2  &trans  &trans        &trans        &trans  &bt BT_CLR
+&bootloader  &trans      &trans      &trans            &trans  &trans  &trans  &trans        &trans        &trans  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -268,15 +268,6 @@
             >;
         };
 
-        AutoMouse_Layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-            >;
-        };
-
         Setting_Layer {
             bindings = <
 &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(N2)))  &kp LC(LA(LG(NUMBER_3)))  &kp LG(LC(LA(N4)))  &kp LA(LC(LG(N5)))           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt1    &bt BT_SEL 4
@@ -286,6 +277,15 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        AutoMouse_Layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+            >;
         };
     };
 
