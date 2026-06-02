@@ -195,7 +195,7 @@
 
         mouse {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp F15                   &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT  &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))
+&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp F15                   &kp F5             &hold_tap_and_release LEFT_GUI LEFT_ARROW  &hold_tap_and_release LEFT_GUI RIGHT  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
 &kp HOME    &kp LEFT         &kp DOWN      &kp RIGHT    &kp END                   &kp LC(F)          &mkp MB1                                   &kp LG(TAB)                           &mkp MB2          &kp F7
 &kp LC(Z)   &kp LC(X)        &kp LC(C)     &kp LC(V)    &kp LC(A)  &fast_tap F14  &kp LC(PAGE_DOWN)  &mkp MB4                                   &kp PG_DN                             &mkp MB5          &kp LS(LC(T))
 &trans      &trans           &trans        &trans       &trans     &trans         &lt 2 LS(ENTER)    &kp LG(T)                                  &kp DELETE                            &kp LS(LG(S))     &kp END
