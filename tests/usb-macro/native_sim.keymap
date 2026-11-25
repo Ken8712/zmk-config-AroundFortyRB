@@ -7,10 +7,10 @@
     columns = <42>;
     events = <
         ZMK_MOCK_PRESS(0,36,250)
-        ZMK_MOCK_PRESS(0,4,10)
+        ZMK_MOCK_PRESS(0,4,150)
         ZMK_MOCK_RELEASE(0,4,10)
+        ZMK_MOCK_RELEASE(0,36,10)
         ZMK_MOCK_PRESS(0,31,10)
         ZMK_MOCK_RELEASE(0,31,10)
-        ZMK_MOCK_RELEASE(0,36,10)
     >;
 };
