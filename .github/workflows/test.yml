@@ -1,0 +1,63 @@
+name: test
+
+on: [push, pull_request, workflow_dispatch]
+
+env:
+  ZMK_REF: 6e2ef41e022d555b10f116e395832913f71717b3 # config/west.yml の zmk と揃える
+
+jobs:
+  keymap-same:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 今の版とキーマップの中身を比べる
+        run: python3 tests/keymap-same/compare.py tests/keymap-same/reference.keymap config/AroundForty-RB.keymap tests/keymap-same/allowed.txt
+
+  native-sim:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/zmkfirmware/zmk-build-arm:4.1
+    steps:
+      - name: Checkout config
+        uses: actions/checkout@v4
+        with:
+          path: config-repo
+      - name: Checkout ZMK
+        uses: actions/checkout@v4
+        with:
+          repository: zmkfirmware/zmk
+          ref: ${{ env.ZMK_REF }}
+          path: zmk
+      - name: Cache west modules
+        uses: actions/cache@v4
+        continue-on-error: true
+        with:
+          path: |
+            zmk/modules/
+            zmk/tools/
+            zmk/zephyr/
+            zmk/bootloader/
+          key: zmk-test-${{ env.ZMK_REF }}
+      - name: west init / update / export
+        working-directory: zmk
+        run: |
+          west init -l app || true
+          west update --fetch-opt=--filter=tree:0
+          west zephyr-export
+      - name: 試験を ZMK の中に写す
+        run: |
+          mkdir -p zmk/app/tests/aroundforty
+          for d in config-repo/tests/*/; do
+            [ -f "$d/native_sim.keymap" ] && cp -R "$d" zmk/app/tests/aroundforty/
+          done
+          python3 config-repo/tests/prep_keymap.py config-repo/config/AroundForty-RB.keymap zmk/app/tests/aroundforty/AroundForty-RB.keymap
+          ls -R zmk/app/tests/aroundforty
+      - name: 試験を回す
+        working-directory: zmk/app
+        run: ./run-test.sh tests/aroundforty
+      - name: ログを残す
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: zmk/app/build/tests/**/*.log

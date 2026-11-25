@@ -1,0 +1,12 @@
+/* 電源を入れた直後は iPad のレイヤー（0）。FnL1（位置 31）は iPad で Command、Windows で Ctrl なので見分けられる */
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../AroundForty-RB.keymap"
+
+&kscan {
+    rows = <1>;
+    columns = <42>;
+    events = <
+        ZMK_MOCK_PRESS(0,31,10)
+        ZMK_MOCK_RELEASE(0,31,10)
+    >;
+};

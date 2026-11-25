@@ -1,0 +1,15 @@
+/* iPad のレイヤーで L1（位置 34）を短く押すと 英数（LANG2）が出て、iPad のレイヤーのまま（2026-05-24 の直しの件）。
+   続けて FnL1（位置 31）が Command なら iPad のまま */
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../AroundForty-RB.keymap"
+
+&kscan {
+    rows = <1>;
+    columns = <42>;
+    events = <
+        ZMK_MOCK_PRESS(0,34,50)
+        ZMK_MOCK_RELEASE(0,34,300)
+        ZMK_MOCK_PRESS(0,31,10)
+        ZMK_MOCK_RELEASE(0,31,10)
+    >;
+};
