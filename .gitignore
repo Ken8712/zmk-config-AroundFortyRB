@@ -6,3 +6,4 @@ modules/
 *.uf2
 *.bin
 *.hex
+__pycache__/
