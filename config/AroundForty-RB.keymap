@@ -187,6 +187,7 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
             toggle-mode = "on";
+            locking;  // v0.4: &to 1 でロックされたレイヤーも外せるように
         };
 
         tog_off: toggle_layer_off_only {
@@ -194,6 +195,7 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
+            locking;  // v0.4: &to 1 でロックされたレイヤーも外せるように
         };
     };
 

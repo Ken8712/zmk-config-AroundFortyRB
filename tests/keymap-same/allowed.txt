@@ -1,6 +1,5 @@
-# 意図して変えたキー: 「<レイヤーの名前> <位置>  # 理由」。マクロは「macro <名前>  # 理由」
+# 意図して変えたキー: 「<レイヤーの名前> <位置>  # 理由」。マクロは「macro <名前>」、behavior は「behavior <ノードの名前（: の後）>」
+# マクロの頭の <&out OUT_BLE>, は compare.py が除いて比べる（bt0・bt1・bt2 は許可に書かない）
 bt 4  # USB マクロを割り当て
-macro bt0  # Bluetooth 出力へ戻す
-macro bt1  # Bluetooth 出力へ戻す
-macro bt2  # Bluetooth 出力へ戻す
-macro usb  # USB 出力へ切り替え
+behavior toggle_layer_on_only  # v0.4 のレイヤーのロック: locking を足す（&to 1 でロックされた Windows から bt0 で抜けるため）
+behavior toggle_layer_off_only  # 同上
