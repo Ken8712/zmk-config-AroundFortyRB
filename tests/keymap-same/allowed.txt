@@ -1,1 +1,6 @@
 # 意図して変えたキー: 「<レイヤーの名前> <位置>  # 理由」。マクロは「macro <名前>  # 理由」
+bt 4  # USB マクロを割り当て
+macro bt0  # Bluetooth 出力へ戻す
+macro bt1  # Bluetooth 出力へ戻す
+macro bt2  # Bluetooth 出力へ戻す
+macro usb  # USB 出力へ切り替え
