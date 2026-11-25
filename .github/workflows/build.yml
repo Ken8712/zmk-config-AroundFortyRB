@@ -2,4 +2,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
+    # ZMK と同じ commit に固定（config/west.yml の zmk の revision と揃える）。
+    # @v0.3.0 の workflow はボード名の「//zmk」で成果物の名前付けに失敗する（本家 main の run 32087394029）
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@6e2ef41e022d555b10f116e395832913f71717b3
