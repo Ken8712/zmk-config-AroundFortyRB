@@ -24,7 +24,7 @@
 - workflow `test`（`.github/workflows/test.yml`）が `tests/*` を ZMK の `app/tests/aroundforty/` に写し、`native_sim` で `./run-test.sh tests/aroundforty` を回す
 - 試験 1 件は `tests/<名前>/{native_sim.keymap,events.patterns,keycode_events.snapshot}`。キーの押し離しは `ZMK_MOCK_PRESS(行,列,ms)`／`ZMK_MOCK_RELEASE`
 - snapshot は手で書く（`ZMK_TESTS_AUTO_ACCEPT` で出た物をそのまま期待にしない）
-- workflow `test` の `keymap-same` は `tests/keymap-same/compare.py` で、今の版（`reference.keymap`）と比べてレイヤー・キー・コンボ・マクロが欠けたり変わったりしていないかを見る。意図して変えたキーは `tests/keymap-same/allowed.txt` に「<レイヤーの名前> <位置>  # 理由」、マクロは「macro <名前>  # 理由」で足す（それ以外の違いは落ちる）
+- workflow `test` の `keymap-same` は `tests/keymap-same/compare.py` で、今の版（`reference.keymap`）と比べてレイヤー・キー・コンボ・マクロ・behaviors のプロパティ・conditional_layers・`&mt { … }` の上書き・#define が欠けたり変わったりしていないかを見る（マクロの頭の `<&out OUT_BLE>,` は除いて比べる）。意図して変えたキーは `tests/keymap-same/allowed.txt` に「<レイヤーの名前> <位置>  # 理由」、マクロは「macro <名前>  # 理由」、behavior は「behavior <ノードの名前>  # 理由」で足す（それ以外の違いは落ちる）
 - 試験のキーマップは `tests/prep_keymap.py` が `config/AroundForty-RB.keymap` を写した物（RGB の include を外し、`&bt …` を `&none` に）。試験の `&kscan` は `rows = <1>; columns = <42>;` で、位置＝キーマップの並びの番号（0 から）
 - キーマップを変える Issue では、その変更を確かめる試験を 1 件足す
 

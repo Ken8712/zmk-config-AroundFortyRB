@@ -1,0 +1,16 @@
+/* BT レイヤーの T キー（位置 4）で USB に切り替え、Windows の FnL1（位置 31）が Ctrl になる */
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../AroundForty-RB.keymap"
+
+&kscan {
+    rows = <1>;
+    columns = <42>;
+    events = <
+        ZMK_MOCK_PRESS(0,36,250)
+        ZMK_MOCK_PRESS(0,4,150)
+        ZMK_MOCK_RELEASE(0,4,10)
+        ZMK_MOCK_RELEASE(0,36,10)
+        ZMK_MOCK_PRESS(0,31,10)
+        ZMK_MOCK_RELEASE(0,31,10)
+    >;
+};

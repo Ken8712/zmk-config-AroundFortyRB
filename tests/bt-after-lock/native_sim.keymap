@@ -1,0 +1,24 @@
+/* Windows のレイヤーで L1（位置 34）を短く押すと &to 1 でレイヤー 1 がロックされる（ZMK v0.4 のレイヤーのロック）。
+   その後 L3（位置 36）を押したまま bt0（位置 5）で iPad に戻れること。FnL1（位置 31）が Command（0xE3）なら iPad。
+   始めは L3 を押したまま bt3（位置 8）で Windows に入る。マクロの待ち（200＋500ms）のあと 1 秒置く */
+#include <dt-bindings/zmk/kscan_mock.h>
+#include "../AroundForty-RB.keymap"
+
+&kscan {
+    rows = <1>;
+    columns = <42>;
+    events = <
+        ZMK_MOCK_PRESS(0,36,250)
+        ZMK_MOCK_PRESS(0,8,50)
+        ZMK_MOCK_RELEASE(0,8,1000)
+        ZMK_MOCK_RELEASE(0,36,50)
+        ZMK_MOCK_PRESS(0,34,50)
+        ZMK_MOCK_RELEASE(0,34,300)
+        ZMK_MOCK_PRESS(0,36,250)
+        ZMK_MOCK_PRESS(0,5,50)
+        ZMK_MOCK_RELEASE(0,5,1000)
+        ZMK_MOCK_RELEASE(0,36,50)
+        ZMK_MOCK_PRESS(0,31,10)
+        ZMK_MOCK_RELEASE(0,31,10)
+    >;
+};
